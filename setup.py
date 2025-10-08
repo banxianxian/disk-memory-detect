@@ -5,9 +5,11 @@ setup(
     packages=find_packages(),
     author='banfeb',
     description='用于检测磁盘存储变化的项目',
-    long_description=open('README.md').read(),
+    long_description=open('README.md', encoding='utf-8').read(),
     long_description_content_type='text/markdown',
-    install_requires=[],
+    install_requires=[
+        "psutil",
+        "mmh3",],
     entry_points={
         'console_scripts': [
             "dmd = dmd.cli.main:main",

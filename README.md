@@ -19,15 +19,20 @@
 
 
 
+```powershell
+git clone https://github.com/banxianxian/disk-memory-detect.git
+```
+
 
 
 
 
 ## 运行
 
-加入工作目录`disk-memory-detect`
+进入工作目录`disk-memory-detect`
 
 ```cmd
+cd disk-memory-detect
 dmd run [dir_path] [options]
 ```
 
