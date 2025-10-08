@@ -1,0 +1,2 @@
+[console_scripts]
+dmd = dmd.cli.main:main

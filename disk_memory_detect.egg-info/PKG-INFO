@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: disk-memory-detect
+Version: 0.1.0
+Summary: 用于检测磁盘存储变化的项目
+Author: banfeb
+Description-Content-Type: text/markdown
