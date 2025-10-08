@@ -66,5 +66,8 @@ dmd run [dir_path] [options]
 
 
 
+# 未来开发
 
+- 通过监听避免每次扫盘
+- 开发图形界面
 
