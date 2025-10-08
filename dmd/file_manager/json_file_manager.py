@@ -18,6 +18,7 @@ class TimesJSONFileManager:
         return f"{self.prefix}_{timestamp}.{self.suffix}"
 
     def save(self, data: dict):
+        os.makedirs(self.dir_path, exist_ok=True)
         filename = self._generate_filename() + ".gz"
         path = os.path.join(self.dir_path, filename)
         with gzip.open(path, "wb") as f:
