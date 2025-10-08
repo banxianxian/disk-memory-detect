@@ -18,7 +18,7 @@
 ## 安装
 
 ```powershell
-# 打开终端cmd
+// 打开终端cmd
 git clone https://github.com/banxianxian/disk-memory-detect.git
 ```
 
