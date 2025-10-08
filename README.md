@@ -17,9 +17,8 @@
 
 ## 安装
 
-
-
 ```powershell
+# 打开终端cmd
 git clone https://github.com/banxianxian/disk-memory-detect.git
 ```
 
@@ -29,10 +28,33 @@ git clone https://github.com/banxianxian/disk-memory-detect.git
 
 ## 运行
 
-进入工作目录`disk-memory-detect`
+进入工作目录
 
 ```cmd
 cd disk-memory-detect
+```
+
+创建虚拟python环境或者激活已经存在的python环境
+
+```cmd
+# 创建python虚拟环境
+python -m venv .venv
+# 激活虚拟环境(powershell需要管理员权限)
+.venv\Scripts\activate
+# powershell的管理员权限命令
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
+```
+
+安装相关包
+
+```
+pip install -e .
+```
+
+运行命令
+
+```cmd
+# dmd run F:/F_Disk/projects/langchain_learn --topn 5 --minsize 0
 dmd run [dir_path] [options]
 ```
 

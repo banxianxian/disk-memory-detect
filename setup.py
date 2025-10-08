@@ -9,7 +9,8 @@ setup(
     long_description_content_type='text/markdown',
     install_requires=[
         "psutil",
-        "mmh3",],
+        "mmh3",
+        "tabulate"],
     entry_points={
         'console_scripts': [
             "dmd = dmd.cli.main:main",
