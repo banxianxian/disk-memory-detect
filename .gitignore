@@ -1,2 +1,4 @@
 需求开发
 requirements.txt
+history/*
+!history/.gitkeep

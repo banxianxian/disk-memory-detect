@@ -22,7 +22,7 @@ class TimesJSONFileManager:
         filename = self._generate_filename() + ".gz"
         path = os.path.join(self.dir_path, filename)
         with gzip.open(path, "wb") as f:
-            f.write(json.dumps(data, ensure_ascii=False, indent=4).encode("utf-8"))
+            f.write(json.dumps(data, ensure_ascii=False, indent=4).encode("utf-8", errors="replace"))
 
     def _get_latest_file(self) -> str | None:
         files = [os.path.join(self.dir_path, f)
@@ -37,7 +37,7 @@ class TimesJSONFileManager:
         data = None
         if latest_file:
             with gzip.open(latest_file, "rb") as f:
-                data = json.loads(f.read().decode("utf-8"))
+                data = json.loads(f.read().decode("utf-8", errors="replace"))
         return data
 
     def delete_old_files(self):

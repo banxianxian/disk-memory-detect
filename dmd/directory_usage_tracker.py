@@ -67,7 +67,11 @@ class DirectoryUsageTracker(object):
         """
         for key, item in tree_folders.items():
             if item["type"] == "file":
-                item["size"] = os.path.getsize(key)
+                try:
+                    item["size"] = os.path.getsize(key)
+                except FileNotFoundError:
+                    item["size"] = 0
+                    logger.warning(f"File disappeared during scan and was skipped: {key}")
                 return item["size"]
         total_size = 0
         for key in tree_folders.keys():
