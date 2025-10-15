@@ -19,7 +19,7 @@
 
 ```powershell
 // 打开终端cmd
-git clone https://github.com/banxianxian/disk-memory-detect.git
+git clone https://github.com/banfeb/disk-memory-detect.git
 ```
 
 
